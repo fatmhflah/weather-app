@@ -40,14 +40,14 @@ body {
   background-color: #121212;
 }
 .header {
-  background-color: #012855;
+  background-color: #8a8fc6;
   color: #fff;
   border-radius: 20px;
   text-align: center;
   margin-top: 1rem;
 }
 .btn-search {
-  background-image: linear-gradient(to right , cyan ,magenta);
+  background-image: linear-gradient(to right , #0051ff, #0033ff);
 }
 
 </style>

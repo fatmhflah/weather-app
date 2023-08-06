@@ -1,6 +1,6 @@
 <template>
-    <div class="d-flex mt-3 mb-3">
-        <div class="card main-div w-100 me-3">
+    <div class="mt-3 mb-3">
+        <div class="card main-div w-100 text-center">
           <div class="p-3">
             <h2 class="mb-1 day">Today</h2>
             <p class="text-light date mb-0">{{ date }}</p>
@@ -12,40 +12,40 @@
             </div>
           </div>
         </div>
-        <div class="card card-2 w-100">
-        <table class="mt-4 mb-4">
-          <tbody>
-          <tr>
-            <th>wind</th>
-            <td>{{wind}}</td>
-          </tr>
-          <tr>
-            <th>sea level</th>
-            <td v-if="sea_level > 0">{{sea_level}}</td>
-            <td v-else>null</td>
-          </tr>
-          <tr>
-            <th>Humidity</th>
-            <td>{{humidity}}</td>
-          </tr>
-          </tbody>
+<!--        <div class="card card-2 w-100">-->
+<!--        <table class="mt-4 mb-4">-->
+<!--          <tbody>-->
+<!--          <tr>-->
+<!--            <th>wind</th>-->
+<!--            <td>{{wind}}</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <th>sea level</th>-->
+<!--            <td v-if="sea_level > 0">{{sea_level}}</td>-->
+<!--            <td v-else>null</td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <th>Humidity</th>-->
+<!--            <td>{{humidity}}</td>-->
+<!--          </tr>-->
+<!--          </tbody>-->
 
-        </table>
-        <days-weather :cityname="city" :temperature="temperature"></days-weather>
+<!--        </table>-->
+<!--        <days-weather :cityname="city" :temperature="temperature"></days-weather>-->
 
-        <div id="div_form" class="d-flex justify-content-center">
-          <form action="">
-            <input type="button" value="check location " class="btn btn-primary change-btn mb-3" @click="changeLocation">
-          </form>
-        </div>
+<!--        <div id="div_form" class="d-flex justify-content-center">-->
+<!--          <form action="">-->
+<!--            <input type="button" value="check location " class="btn btn-primary change-btn mb-3" @click="changeLocation">-->
+<!--          </form>-->
+<!--        </div>-->
 
-      </div>
+<!--      </div>-->
     </div>
 
 </template>
 
 <script setup>
-import DaysWeather from './DaysWeather.vue'
+// import DaysWeather from './DaysWeather.vue'
 import {defineProps, onMounted, ref} from "vue";
 import axios from "axios";
 
@@ -114,12 +114,12 @@ onMounted(async () => {
 //
 // }
 
-function changeLocation(){
-  console.log('changed')
-  // input.searchinput.focouse()
-  console.log('it is clicked')
-  window.location.reload()
-}
+// function changeLocation(){
+//   console.log('changed')
+//   // input.searchinput.focouse()
+//   console.log('it is clicked')
+//   window.location.reload()
+// }
 // Create()
 </script>
 
@@ -146,15 +146,11 @@ h2.mb-1.day {
   background-repeat: no-repeat;
   background-image: url("../assets/img/wp2885476.jpg")!important;
 }
-.temp {
-  position: absolute;
-  bottom: 0;
-}
-.main-div:hover {
-  /*transform: scale(1.1);*/
-  /*transition: transform 0.5s ease;*/
-  /*z-index: 1;*/
-}
+/*.temp {*/
+/*  position: absolute;*/
+/*  bottom: 0;*/
+/*}*/
+
 .card-2 {
   background-color: #212730!important;
   border-radius: 20px;
