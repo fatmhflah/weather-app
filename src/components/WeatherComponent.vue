@@ -50,6 +50,7 @@ import {defineProps, onMounted, ref} from "vue";
 import axios from "axios";
 
 const props = defineProps(['city'])
+console.log(props)
 
 const name = ref(null)
 const country = ref(null)
